@@ -9,9 +9,7 @@ class Main extends Component {
       <div className='wrapper'>
         <Header />
 
-        <div className='blue' />
-        <div className='green' />
-        <div className='red' />
+        <img alt='twerk' src='https://goo.gl/cuyRLu' />
 
         <Footer />
       </div>
