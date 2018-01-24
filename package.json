@@ -2,7 +2,7 @@
   "name": "react-spa",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ytonta.github.io",
+  "homepage": "https://ytonta.github.io",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "history": "^4.7.2",
@@ -17,7 +17,9 @@
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
-    "sanitize.css": "^5.0.0"
+    "sanitize.css": "^5.0.0",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.2"
   },
   "scripts": {
     "predeploy": "npm run build",
