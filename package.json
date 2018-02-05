@@ -17,14 +17,12 @@
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
-    "sanitize.css": "^5.0.0",
-    "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.77.2"
+    "sanitize.css": "^5.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b master",
-    "ghhelp": "gh-pages --help",
+    "gh-help": "gh-pages --help",
     "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src -o src",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",

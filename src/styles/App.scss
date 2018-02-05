@@ -1,20 +1,10 @@
-%params {
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-}
+.menu {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
 
-.blue {
-  @extend %params;
-  background-color: blue;
-}
-
-.green {
-  @extend %params;
-  background-color: green;
-}
-
-.red {
-  @extend %params;
-  background-color: red;
+  &__item {
+  }
 }
