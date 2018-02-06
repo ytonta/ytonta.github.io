@@ -1,4 +1,36 @@
-.menu__list {
-  display: flex;
-  margin: 0;
-  padding: 0; }
+.wrapper {
+  display: grid; }
+
+.menu {
+  padding: 10px; }
+  .menu__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto) 1fr;
+    grid-gap: 20px;
+    margin: 0;
+    padding: 0; }
+  .menu__item a {
+    text-decoration: none; }
+
+.profile {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'email picture social';
+  align-items: center;
+  justify-items: center; }
+  .profile__email {
+    grid-area: email; }
+  .profile__picture {
+    grid-area: picture;
+    max-width: 200px; }
+    .profile__picture img {
+      width: 100%;
+      height: auto;
+      border-radius: 100%; }
+  .profile__social {
+    grid-area: social; }
+  @media (max-width: 768px) {
+    .profile {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'picture' 'email' 'social'; } }
