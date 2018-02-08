@@ -1,24 +1,39 @@
 .wrapper {
-  display: grid; }
+  display: grid;
+  grid-template-areas: 'header' 'section' 'footer'; }
+
+.header {
+  grid-area: header; }
 
 .menu {
   padding: 10px; }
   .menu__list {
     display: grid;
-    grid-template-columns: repeat(4, auto) 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
     margin: 0;
     padding: 0; }
+    @media (min-width: 768px) {
+      .menu__list {
+        grid-template-columns: repeat(4, auto) 1fr; } }
   .menu__item a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000; }
 
 .profile {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: 'email picture social';
+  grid-template-columns: 1fr;
+  grid-template-areas: 'picture' 'description' 'email' 'social';
   align-items: center;
   justify-items: center; }
+  @media (min-width: 768px) {
+    .profile {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 'email picture social' 'description description description'; } }
+  .profile__description {
+    grid-area: description;
+    text-align: center; }
   .profile__email {
     grid-area: email; }
   .profile__picture {
@@ -30,7 +45,49 @@
       border-radius: 100%; }
   .profile__social {
     grid-area: social; }
-  @media (max-width: 768px) {
-    .profile {
-      grid-template-columns: 1fr;
-      grid-template-areas: 'picture' 'email' 'social'; } }
+
+.section {
+  display: grid;
+  grid-area: section;
+  grid-template-areas: 'about' 'skills' 'experience' 'education' 'achievements' 'hobbies'; }
+  .section div:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.1); }
+  .section div:nth-child(even) {
+    background: rgba(0, 0, 0, 0.2); }
+  .section__about {
+    grid-area: about; }
+  .section__skills {
+    grid-area: skills; }
+  .section__experience {
+    grid-area: experience; }
+  .section__education {
+    grid-area: education; }
+  .section__achievements {
+    grid-area: achievements; }
+  .section__hobbies {
+    grid-area: hobbies; }
+
+.skill {
+  padding: 0;
+  margin: 0; }
+  .skill__item {
+    display: grid;
+    grid-template-rows: auto auto; }
+    .skill__item:after {
+      content: '';
+      background: #188fd4;
+      display: block;
+      grid-row: 2 / -1;
+      grid-column: 1 / -1;
+      height: 10px;
+      border-radius: 5px; }
+  .skill__percentage {
+    background: #0068a5;
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    height: 10px;
+    border-radius: 5px;
+    z-index: 1; }
+
+.footer {
+  grid-area: footer; }
