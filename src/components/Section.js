@@ -65,7 +65,7 @@ class Section extends Component {
             <div className='experience'>
               <ul className='timeline'>
                 <li className='timeline__item'>
-                  <span className='experience__item'>
+                  <span className='timeline__content experience__item'>
                     <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <span className='experience__year'>2000 - 2000</span>
                     <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -79,7 +79,7 @@ class Section extends Component {
                   </span>
                 </li>
                 <li className='timeline__item'>
-                  <span className='experience__item'>
+                  <span className='timeline__content experience__item'>
                     <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <span className='experience__year'>2000 - 2000</span>
                     <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -92,6 +92,77 @@ class Section extends Component {
                     </ul>
                   </span>
                 </li>
+                <li className='timeline__item'>
+                  <span className='timeline__content experience__item'>
+                    <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <span className='experience__year'>2000 - 2000</span>
+                    <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul className='experience__description'>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </span>
+                </li>
+                <li className='timeline__item'>
+                  <span className='timeline__content experience__item'>
+                    <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <span className='experience__year'>2000 - 2000</span>
+                    <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul className='experience__description'>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </span>
+                </li>
+                <li className='timeline__item'>
+                  <span className='timeline__content experience__item'>
+                    <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <span className='experience__year'>2000 - 2000</span>
+                    <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul className='experience__description'>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </span>
+                </li>
+                <li className='timeline__item'>
+                  <span className='timeline__content experience__item'>
+                    <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <span className='experience__year'>2000 - 2000</span>
+                    <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul className='experience__description'>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </span>
+                </li>
+                <li className='timeline__item'>
+                  <span className='timeline__content experience__item'>
+                    <span className='experience__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <span className='experience__year'>2000 - 2000</span>
+                    <span className='experience__position'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul className='experience__description'>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li className='experience__description__item'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                  </span>
+                </li>
+                <li className='timeline__placeholder'></li>
               </ul>
             </div>
           </div>
@@ -105,19 +176,20 @@ class Section extends Component {
             <div className='education'>
               <ul className='timeline'>
                 <li className='timeline__item'>
-                  <span className='education__item'>
+                  <span className='timeline__content education__item'>
                     <span className='education__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <span className='education__year'>2000 - 2000</span>
                     <span className='education__place'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                   </span>
                 </li>
                 <li className='timeline__item'>
-                  <span className='education__item'>
+                  <span className='timeline__content education__item'>
                     <span className='education__title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <span className='education__year'>2000 - 2000</span>
                     <span className='education__place'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                   </span>
                 </li>
+                <li className='timeline__placeholder'></li>
               </ul>
             </div>
           </div>
