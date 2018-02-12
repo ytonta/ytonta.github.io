@@ -1,0 +1,16 @@
+body {
+  background: $body-bg;
+  color: $body-color;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'section'
+    'footer';
+}
+
+.footer {
+  grid-area: footer;
+}

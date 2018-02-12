@@ -1,0 +1,17 @@
+.education {
+  &__item {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'title year' 'place place';
+  }
+  &__title {
+    grid-area: title;
+  }
+  &__year {
+    grid-area: year;
+    text-align: right;
+  }
+  &__place {
+    grid-area: place;
+  }
+}

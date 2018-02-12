@@ -13,7 +13,6 @@ import { render } from 'react-dom';
 
 // import css
 import 'sanitize.css/sanitize.css';
-import './styles/index.css';
 
 // import components
 import App from './components/App';
