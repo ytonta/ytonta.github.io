@@ -14,26 +14,27 @@
 // COLORS //
 ////////////
 $black : #212121 !default;
-$white : #F5F5F5 !default;
+$white : #ffffff !default;
 
 $gray-dark : #424242 !default;
 $gray : #616161 !default;
+$gray-light: #F5F5F5 !default;
 
 // $color-primary : !default;
 $color-secondary :  #ef5350 !default;
 
 $body-color: $black !default;
-$section-color: $white !default;
+$section-color: $gray-light !default;
 
 /////////////////
 // BACKGROUNDS //
 /////////////////
 $section-bg: $gray-dark !default;
-$body-bg: $white !default;
+$body-bg: $gray-light !default;
 
 //////////////
 // SECTIONS //
 //////////////
 // skill
-$bar-foreground: $white !default;
+$bar-foreground: $gray-light !default;
 $bar-background: $gray !default;

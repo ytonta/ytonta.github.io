@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaHeadphones, FaCode, FaGamepad } from 'react-icons/lib/fa';
 
 class Section extends Component {
   render() {
@@ -131,6 +132,7 @@ class Section extends Component {
             <h2 className='section__title'>Achievements</h2>
 
             <div className='achievement'>
+
             </div>
           </div>
         </div>
@@ -141,6 +143,24 @@ class Section extends Component {
             <h2 className='section__title'>Hobbies</h2>
 
             <div className='hobby'>
+              <div className='hobby__item'>
+                <div className='hobby__logo'>
+                  <FaHeadphones size='50' className='' />
+                </div>
+                <div className='hobby__title'>Music</div>
+              </div>
+              <div className='hobby__item'>
+                <div className='hobby__logo'>
+                  <FaCode size='50' className='' />
+                </div>
+                <div className='hobby__title'>Coding</div>
+              </div>
+              <div className='hobby__item'>
+                <div className='hobby__logo'>
+                  <FaGamepad size='50' className='' />
+                </div>
+                <div className='hobby__title'>Gaming</div>
+              </div>
             </div>
           </div>
         </div>

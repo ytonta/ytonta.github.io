@@ -7,7 +7,7 @@ class Header extends Component {
       <header className='header'>
 
         {/* Menu */}
-        <FaBars size='30' />
+        <FaBars size='30' className='menu__toggle' />
         <nav className='menu'>
           <ul className='menu__list'>
             <li className='menu__item'>
