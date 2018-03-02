@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px 50px;
-  @media(min-width: 768px) {
+  @include media('>=tablet') {
     grid-template-columns: 1fr 1fr;
   }
   &__item {

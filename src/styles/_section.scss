@@ -65,43 +65,73 @@
 
 .timeline {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    '. placeholder'
-    'left .'
-    'left right'
-    '. right';
+  grid-template-columns: 1fr;
   list-style-type: none;
   padding: 0;
   margin: 0;
 
+  @include media('>=tablet') {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      '. placeholder'
+      'left .'
+      'left right'
+      '. right';
+  }
+
   &__placeholder {
-    grid-area: placeholder;
+    @include media('>=tablet') {
+      grid-area: placeholder;
+    }
   }
 
   &__item {
     padding: 0 20px 20px;
 
+    @include media('>=tablet') {
+      align-self: end;
+    }
+
     &:nth-child(odd) {
-      grid-row: span 2;
-      border-right: 2px solid $black;
+      border-left: 2px solid $black;
+      margin-left: -2px;
+
+      @include media('>=tablet') {
+        grid-row: span 2;
+        border-left: 0;
+        margin-left: 0;
+        border-right: 2px solid $black;
+      }
 
       .timeline__content {
         &:before {
-          right: -26px;
+          left: -26px;
+
+          @include media('>=tablet') {
+            left: initial;
+            right: -26px;
+          }
         }
 
         &:after {
-          right: -10px;
+          left: -10px;
           border-color: $section-bg transparent transparent;
+
+          @include media('>=tablet') {
+            left: initial;
+            right: -10px;
+          }
         }
       }
     }
 
     &:nth-child(even) {
-      grid-row: span 2;
       border-left: 2px solid $black;
       margin-left: -2px;
+
+      @include media('>=tablet') {
+        grid-row: span 2;
+      }
 
       .timeline__content {
         &:before {
@@ -116,11 +146,19 @@
     }
 
     &:first-child {
-      grid-area: left;
+      @include media('>=tablet') {
+        grid-area: left;
+      }
+    }
+
+    &:nth-last-child(2) {
+      padding-bottom: 0;
     }
 
     &:nth-child(2) {
-      grid-area: right;
+      @include media('>=tablet') {
+        grid-area: right;
+      }
     }
   }
 

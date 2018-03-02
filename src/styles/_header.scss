@@ -6,12 +6,12 @@
   display: none;
   padding: 10px;
 
-  @media(min-width: 768px) {
+  @include media('>=tablet') {
     display: block;
   }
 
   &__toggle {
-    @media(min-width: 768px) {
+    @include media('>=tablet') {
       display: none;
     }
   }
@@ -23,7 +23,7 @@
     margin: 0;
     padding: 0;
 
-    @media(min-width: 768px) {
+    @include media('>=tablet') {
       grid-template-columns: repeat(4, auto) 1fr;
     }
   }
@@ -48,7 +48,7 @@
   align-items: center;
   justify-items: center;
 
-  @media(min-width: 768px) {
+  @include media('>=tablet') {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       'email picture social'
