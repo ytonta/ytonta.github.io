@@ -27,10 +27,10 @@ import registerServiceWorker from './registerServiceWorker';
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path='/' component={App}></Route>
+      <Route path="/" component={App} />
     </Router>
   </Provider>
-)
+);
 
 render(router, document.getElementById('root'));
 registerServiceWorker();

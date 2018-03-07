@@ -106,6 +106,21 @@ body {
 .education__place {
   grid-area: place; }
 
+.achievement__item {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 'icon title' 'icon description';
+  margin-bottom: 20px; }
+
+.achievement__icon-container {
+  grid-area: icon; }
+
+.achievement__title {
+  grid-area: title; }
+
+.achievement__description {
+  grid-area: description; }
+
 .hobby {
   display: grid;
   grid-template-columns: repeat(auto-fit, 90px);

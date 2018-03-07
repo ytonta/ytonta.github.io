@@ -1,0 +1,22 @@
+.achievement {
+  &__item {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+      'icon title'
+      'icon description';
+    margin-bottom: 20px;
+  }
+
+  &__icon-container {
+    grid-area: icon;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__description {
+    grid-area: description;
+  }
+}

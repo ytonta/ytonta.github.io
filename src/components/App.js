@@ -4,9 +4,7 @@ import * as actionCreators from '../actions/actionCreators';
 import Main from './Main';
 
 const mapStateToProps = (state) => {
-  return {
-    userInfo: state.userInfo,
-  }
+  return { userInfo: state.userInfo };
 }
 
 const mapDispatchToProps = (dispatch) => {
