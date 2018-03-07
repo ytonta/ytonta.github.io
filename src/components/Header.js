@@ -3,7 +3,8 @@ import { FaBars } from 'react-icons/lib/fa';
 
 class Header extends Component {
   render() {
-    return <header className="header">
+    return (
+      <header className="header">
         {/* Menu */}
         <FaBars size="30" className="menu__toggle" />
         <nav className="menu">
@@ -35,7 +36,8 @@ class Header extends Component {
           <div className="profile__email">Email</div>
           <div className="profile__social">Social</div>
         </div>
-      </header>;
+      </header>
+    );
   }
 }
 

@@ -6,11 +6,13 @@ import '../styles/App.css';
 
 class Main extends Component {
   render() {
-    return <div className="wrapper">
+    return (
+      <div className="wrapper">
         <Header />
         <Section />
         <Footer />
-      </div>;
+      </div>
+    );
   }
 }
 
