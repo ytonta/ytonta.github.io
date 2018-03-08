@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class About extends Component {
   render() {
+    console.log(this.props);
     return (
       <div className="section__about">
         <h2 className="section__title">About</h2>

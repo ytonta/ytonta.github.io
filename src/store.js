@@ -1,20 +1,27 @@
 import { createStore, compose } from 'redux';
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
 import rootReducer from './reducers/index';
+import about from './data/about';
+import skills from './data/skills';
+import experience from './data/experience';
+import education from './data/education';
+import achievements from './data/achievements';
+import hobbies from './data/hobbies';
 
 const defaultState = {
-
+  about,
+  skills,
+  experience,
+  education,
+  achievements,
+  hobbies,
 };
 
 const enhancers = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
-const store = createStore(
-  rootReducer,
-  defaultState,
-  enhancers
-);
+const store = createStore(rootReducer, defaultState, enhancers);
 
 export const history = createHistory();
 
