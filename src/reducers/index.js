@@ -1,13 +1,14 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-// import userInfo from './userInfo';
-
-// TODO: Create reducers
-
 const rootReducer = combineReducers({
-  // userInfo,
-  router: routerReducer
+  router: routerReducer,
+  about: (state = {}) => state,
+  skills: (state = {}) => state,
+  experience: (state = {}) => state,
+  education: (state = {}) => state,
+  achievements: (state = {}) => state,
+  hobbies: (state = {}) => state,
 });
 
 export default rootReducer;

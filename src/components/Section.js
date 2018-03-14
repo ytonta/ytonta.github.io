@@ -8,6 +8,7 @@ import Hobbies from './sections/Hobbies';
 
 class Section extends Component {
   render() {
+    console.log('section', this);
     return (
       <div className="section">
         <div className="section__container">
