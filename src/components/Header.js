@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { FaBars } from 'react-icons/lib/fa';
+import * as FontAwesome from 'react-icons/lib/fa';
 
 class Header extends Component {
   render() {
+    const { name, title, email, social } = this.props;
+
+    const Icon = props => {
+      const { iconName, size, color } = props;
+      const icon = React.createElement(FontAwesome[iconName]);
+      return <div style={{ fontSize: size, color: color }}>{icon}</div>;
+    };
+
     return (
       <header className="header">
         {/* Menu */}
-        <FaBars size="30" className="menu__toggle" />
+        <FontAwesome.FaBars size="30" className="menu__toggle" />
         <nav className="menu">
           <ul className="menu__list">
             <li className="menu__item">
@@ -30,11 +38,25 @@ class Header extends Component {
             <img alt="profile" src="http://via.placeholder.com/200x200" />
           </div>
           <div className="profile__description">
-            <h1 className="profile__name">Yannick Tonta</h1>
-            <p className="profile__title">Front End Developer</p>
+            <h1 className="profile__name">
+              {name.first} {name.last}
+            </h1>
+            <p className="profile__title">{title}</p>
           </div>
-          <div className="profile__email">Email</div>
-          <div className="profile__social">Social</div>
+          <div className="profile__email">{email}</div>
+          <ul className="profile__social">
+            {Object.keys(social).map(key => {
+              let iconName = social[key].icon;
+
+              return (
+                <li key={key}>
+                  <a href={social[key].link} target="_blank" rel="noopener">
+                    <Icon iconName={iconName} size={20} />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </header>
     );

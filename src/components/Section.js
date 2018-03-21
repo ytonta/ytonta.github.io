@@ -8,31 +8,39 @@ import Hobbies from './sections/Hobbies';
 
 class Section extends Component {
   render() {
-    console.log('section', this);
+    const {
+      about,
+      skills,
+      experience,
+      education,
+      achievements,
+      hobbies,
+    } = this.props;
+
     return (
       <div className="section">
         <div className="section__container">
-          <About />
+          <About {...about} />
         </div>
 
         <div className="section__container">
-          <Skills />
+          <Skills {...skills} />
         </div>
 
         <div className="section__container">
-          <Experience />
+          <Experience {...experience} />
         </div>
 
         <div className="section__container">
-          <Education />
+          <Education {...education} />
         </div>
 
         <div className="section__container">
-          <Achievements />
+          <Achievements {...achievements} />
         </div>
 
         <div className="section__container">
-          <Hobbies />
+          <Hobbies {...hobbies} />
         </div>
       </div>
     );

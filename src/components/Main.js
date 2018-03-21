@@ -6,11 +6,11 @@ import '../styles/App.css';
 
 class Main extends Component {
   render() {
-    console.log('main', this);
+    console.log(this.props);
     return (
       <div className="wrapper">
-        <Header />
-        <Section />
+        <Header  {...this.props.profile} />
+        <Section {...this.props} />
         <Footer />
         {this.props.children}
       </div>

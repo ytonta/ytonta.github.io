@@ -5,6 +5,7 @@ import Main from './Main';
 
 const mapStateToProps = state => {
   return {
+    profile: state.profile,
     about: state.about,
     skills: state.skills,
     experience: state.experience,

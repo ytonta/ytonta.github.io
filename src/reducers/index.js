@@ -3,6 +3,7 @@ import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
   router: routerReducer,
+  profile: (state = {}) => state,
   about: (state = {}) => state,
   skills: (state = {}) => state,
   experience: (state = {}) => state,
