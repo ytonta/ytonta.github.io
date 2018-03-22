@@ -8,28 +8,23 @@ class Education extends Component {
 
         <div className="education">
           <ul className="timeline">
-            <li className="timeline__item">
-              <span className="timeline__content education__item">
-                <span className="education__title">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-                <span className="education__year">2000 - 2000</span>
-                <span className="education__place">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-              </span>
-            </li>
-            <li className="timeline__item">
-              <span className="timeline__content education__item">
-                <span className="education__title">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-                <span className="education__year">2000 - 2000</span>
-                <span className="education__place">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-              </span>
-            </li>
+            {Object.keys(this.props).map(key => {
+              return (
+                <li className="timeline__item" key={key}>
+                  <span className="timeline__content education__item">
+                    <span className="education__title">
+                      {this.props[key].title}
+                    </span>
+                    <span className="education__year">
+                      {this.props[key].year}
+                    </span>
+                    <span className="education__place">
+                      {this.props[key].place}
+                    </span>
+                  </span>
+                </li>
+              );
+            })}
             <li className="timeline__placeholder" />
           </ul>
         </div>

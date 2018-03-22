@@ -6,7 +6,6 @@ import '../styles/App.css';
 
 class Main extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="wrapper">
         <Header  {...this.props.profile} />

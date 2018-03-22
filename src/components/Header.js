@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import * as FontAwesome from 'react-icons/lib/fa';
+import Icon from './Icon';
 
 class Header extends Component {
   render() {
-    const { name, title, email, social } = this.props;
-
-    const Icon = props => {
-      const { iconName, size, color } = props;
-      const icon = React.createElement(FontAwesome[iconName]);
-      return <div style={{ fontSize: size, color: color }}>{icon}</div>;
-    };
+    const { profilePicture, name, title, email, social } = this.props;
 
     return (
       <header className="header">
@@ -35,7 +30,7 @@ class Header extends Component {
         {/* Header */}
         <div className="profile">
           <div className="profile__picture">
-            <img alt="profile" src="http://via.placeholder.com/200x200" />
+            <img alt="profile" src={profilePicture} />
           </div>
           <div className="profile__description">
             <h1 className="profile__name">
@@ -51,7 +46,7 @@ class Header extends Component {
               return (
                 <li key={key}>
                   <a href={social[key].link} target="_blank" rel="noopener">
-                    <Icon iconName={iconName} size={20} />
+                    <Icon iconName={iconName} size={20} color={'red'} />
                   </a>
                 </li>
               );

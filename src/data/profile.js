@@ -1,4 +1,5 @@
 const profile = {
+  profilePicture: 'http://via.placeholder.com/200x200',
   name: {
     first: 'Lorem',
     last: 'Ipsum',

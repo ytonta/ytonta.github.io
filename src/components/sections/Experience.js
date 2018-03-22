@@ -8,62 +8,35 @@ class Experience extends Component {
 
         <div className="experience">
           <ul className="timeline">
-            <li className="timeline__item">
-              <span className="timeline__content experience__item">
-                <span className="experience__title">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-                <span className="experience__year">2000 - 2000</span>
-                <span className="experience__position">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-                <ul className="experience__description">
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                </ul>
-              </span>
-            </li>
-            <li className="timeline__item">
-              <span className="timeline__content experience__item">
-                <span className="experience__title">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-                <span className="experience__year">2000 - 2000</span>
-                <span className="experience__position">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-                <ul className="experience__description">
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                  <li className="experience__description__item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </li>
-                </ul>
-              </span>
-            </li>
+            {Object.keys(this.props).map(key => {
+              return (
+                <li className="timeline__item" key={key}>
+                  <span className="timeline__content experience__item">
+                    <span className="experience__company">
+                      {this.props[key].company}
+                    </span>
+                    <span className="experience__year">
+                      {this.props[key].year}
+                    </span>
+                    <span className="experience__position">
+                      {this.props[key].position}
+                    </span>
+                    <ul className="experience__description">
+                      {this.props[key].description.map((descriptionItem, index) => {
+                        return (
+                          <li
+                            className="experience__description__item"
+                            key={`${key}-description${index}`}
+                          >
+                            {descriptionItem}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </span>
+                </li>
+              );
+            })}
             <li className="timeline__placeholder" />
           </ul>
         </div>

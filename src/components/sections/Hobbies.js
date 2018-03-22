@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaHeadphones, FaCode, FaGamepad } from 'react-icons/lib/fa';
+import Icon from '../Icon';
 
 class Hobbies extends Component {
   render() {
@@ -8,24 +8,20 @@ class Hobbies extends Component {
         <h2 className="section__title">Hobbies</h2>
 
         <div className="hobby">
-          <div className="hobby__item">
-            <div className="hobby__logo">
-              <FaHeadphones size="50" className="hobby__icon" />
-            </div>
-            <div className="hobby__title">Music</div>
-          </div>
-          <div className="hobby__item">
-            <div className="hobby__logo">
-              <FaCode size="50" className="hobby__icon" />
-            </div>
-            <div className="hobby__title">Coding</div>
-          </div>
-          <div className="hobby__item">
-            <div className="hobby__logo">
-              <FaGamepad size="50" className="hobby__icon" />
-            </div>
-            <div className="hobby__title">Gaming</div>
-          </div>
+          {Object.keys(this.props).map(key => {
+            return (
+              <div key={key} className="hobby__item">
+                <div className="hobby__logo">
+                  <Icon
+                    iconName={this.props[key].icon}
+                    size={50}
+                    className={'hobby__icon'}
+                  />
+                </div>
+                <div className="hobby__title">{this.props[key].title}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
