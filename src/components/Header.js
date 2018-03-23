@@ -46,7 +46,7 @@ class Header extends Component {
               return (
                 <li key={key}>
                   <a href={social[key].link} target="_blank" rel="noopener">
-                    <Icon iconName={iconName} size={20} color={'red'} />
+                    <Icon iconName={iconName} size={20} />
                   </a>
                 </li>
               );
