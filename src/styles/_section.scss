@@ -27,6 +27,7 @@
   &__title {
     color: $body-color;
     text-align: center;
+    margin: 50px 0;
   }
 
   &__about {
@@ -58,9 +59,10 @@
 .skill {
   color: $section-color;
   background: $section-bg;
-  border-radius: 2px;
+  border-radius: $border-radius;
   box-shadow: $box-shadow;
   padding: 20px;
+  margin: 0;
 }
 
 .timeline {
@@ -87,9 +89,22 @@
 
   &__item {
     padding: 0 20px 20px;
+    position: relative;
 
     @include media('>=tablet') {
       align-self: end;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      background: $red;
+      border-radius: 2px;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: -5px;
+      left: -6px;
     }
 
     &:nth-child(odd) {
@@ -103,15 +118,15 @@
         border-right: 2px solid $black;
       }
 
-      .timeline__content {
-        &:before {
-          left: -26px;
+      &:before {
 
-          @include media('>=tablet') {
-            left: initial;
-            right: -26px;
-          }
+        @include media('>=tablet') {
+          left: initial;
+          right: -6px;
         }
+      }
+
+      .timeline__content {
 
         &:after {
           left: -10px;
@@ -134,9 +149,6 @@
       }
 
       .timeline__content {
-        &:before {
-          left: -26px;
-        }
 
         &:after {
           left: -10px;
@@ -165,21 +177,10 @@
   &__content {
     background: $section-bg;
     color: $section-color;
-    border-radius: 2px;
+    border-radius: $border-radius;
     box-shadow: $box-shadow;
     padding: 20px;
     position: relative;
-
-    &:before {
-      content: '';
-      display: block;
-      background: $red;
-      border-radius: 2px;
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      top: -5px;
-    }
 
     &:after {
       content: '';
