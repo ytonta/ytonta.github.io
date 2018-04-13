@@ -40,7 +40,6 @@ class Achievements extends Component {
         <h2 className="section__title">Achievements</h2>
 
         <Achievement className="achievement" pose={isOpen ? 'open' : 'closed'}>
-          {/* IEEE publication, INNOV8 competition */}
           {Object.keys(this.props).map(key => {
             return (
               <div key={key} className="achievement__item">
