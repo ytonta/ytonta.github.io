@@ -4,8 +4,8 @@ const timelineProps = {
   open: {
     y: '0%',
     opacity: 1,
-    delayChildren: 300,
-    staggerChildren: 500,
+    delayChildren: 100,
+    staggerChildren: 250,
   },
   closed: {
     y: '-100%',

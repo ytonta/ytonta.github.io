@@ -13,6 +13,7 @@
     grid-template-rows: auto auto;
 
     &:after {
+      align-self: flex-end;
       content: '';
       background: $bar-background;
       display: block;
@@ -28,12 +29,17 @@
     grid-column: 1;
   }
 
-  &__percentage {
-    background: $bar-foreground;
+  &__percentage-container {
+    align-self: flex-end;
     grid-row: 3;
     grid-column: 1;
-    height: 10px;
+  }
+
+  &__percentage {
+    display: block;
+    background: $bar-foreground;
     border-radius: 5px;
-    z-index: 1;
+    height: 10px;
+    position: relative;
   }
 }

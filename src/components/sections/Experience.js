@@ -11,7 +11,7 @@ class Experience extends Component {
         this.setState({
           isOpen: !this.state.isOpen,
         }),
-      1000
+      500
     );
   }
 
