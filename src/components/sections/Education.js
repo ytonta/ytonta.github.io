@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
+import Timeline from './Timeline';
+import Item from './Item';
 
 class Education extends Component {
+  state = { isOpen: false };
+
+  componentDidMount() {
+    setTimeout(
+      () =>
+        this.setState({
+          isOpen: !this.state.isOpen,
+        }),
+      1000
+    );
+  }
+
   render() {
+    const { isOpen } = this.state;
+
     return (
       <div className="section__education">
         <h2 className="section__title">Education</h2>
 
         <div className="education">
-          <ul className="timeline">
+          <Timeline className="timeline" pose={isOpen ? 'open' : 'closed'}>
             {Object.keys(this.props).map(key => {
               return (
                 <li className="timeline__item" key={key}>
-                  <span className="timeline__content education__item">
+                  <Item className="timeline__content education__item">
                     <span className="education__title">
                       {this.props[key].title}
                     </span>
@@ -21,12 +37,12 @@ class Education extends Component {
                     <span className="education__place">
                       {this.props[key].place}
                     </span>
-                  </span>
+                  </Item>
                 </li>
               );
             })}
             <li className="timeline__placeholder" />
-          </ul>
+          </Timeline>
         </div>
       </div>
     );
