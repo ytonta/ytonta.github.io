@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Icon from '../Icon';
 import posed from 'react-pose';
 
-const itemProps = {
-  open: { scale: 1 },
-  closed: { scale: 0 },
-};
 const hobbyProps = {
   open: {
     delayChildren: 100,
@@ -16,8 +12,12 @@ const hobbyProps = {
     staggerChildren: 20,
   },
 };
-const Item = posed.div(itemProps);
+const itemProps = {
+  open: { scale: 1 },
+  closed: { scale: 0 },
+};
 const Hobby = posed.div(hobbyProps);
+const Item = posed.div(itemProps);
 
 class Hobbies extends Component {
   state = { isOpen: false };

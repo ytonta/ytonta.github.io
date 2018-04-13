@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Icon from '../Icon';
 import posed from 'react-pose';
 
-const iconProps = {
-  open: { scale: 1 },
-  closed: { scale: 0 },
-};
 const achievementProps = {
   open: {
     delayChildren: 100,
@@ -16,8 +12,12 @@ const achievementProps = {
     staggerChildren: 20,
   },
 };
-const IconContainer = posed.div(iconProps);
+const iconProps = {
+  open: { scale: 1 },
+  closed: { scale: 0 },
+};
 const Achievement = posed.div(achievementProps);
+const IconContainer = posed.div(iconProps);
 
 class Achievements extends Component {
   state = { isOpen: false };
