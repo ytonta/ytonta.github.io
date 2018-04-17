@@ -3,17 +3,33 @@
 }
 
 .menu {
-  display: none;
-  padding: 10px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
 
   @include media('>=tablet') {
     display: block;
+    position: relative;
+    transform: translateX(0%) !important;
+    background: transparent;
   }
 
-  &__toggle {
+  &__open,
+  &__close {
     @include media('>=tablet') {
       display: none;
     }
+  }
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1;
   }
 
   &__list {

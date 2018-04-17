@@ -8,7 +8,7 @@ class Main extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Header  {...this.props.profile} />
+        <Header {...this.props.profile} />
         <Section {...this.props} />
         <Footer />
         {this.props.children}

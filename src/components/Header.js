@@ -1,31 +1,86 @@
 import React, { Component } from 'react';
 import * as FontAwesome from 'react-icons/lib/fa';
 import Icon from './Icon';
+import posed from 'react-pose';
+import { tween, easing } from 'popmotion';
+
+const navbarProps = {
+  open: {
+    translateX: '0%',
+    delayChildren: 50,
+    staggerChildren: 50,
+    transition: props =>
+      tween({
+        ...props,
+        duration: 300,
+        ease: easing.anticipate,
+      }),
+  },
+  closed: {
+    translateX: '-100%',
+    delay: 200,
+    staggerChildren: 50,
+    transition: props =>
+      tween({
+        ...props,
+        duration: 300,
+        ease: easing.anticipate,
+      }),
+  },
+};
+const menuItemProps = {
+  open: {
+    translateX: '0%',
+  },
+  closed: {
+    translateX: '-100%',
+  },
+};
+const NavBar = posed.nav(navbarProps);
+const MenuItem = posed.li(menuItemProps);
 
 class Header extends Component {
+  state = { isOpen: false };
+
+  toggleMenu = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  };
+
   render() {
     const { profilePicture, name, title, email, social } = this.props;
+    const { isOpen } = this.state;
 
     return (
       <header className="header">
         {/* Menu */}
-        <FontAwesome.FaBars size="30" className="menu__toggle" />
-        <nav className="menu">
+        <FontAwesome.FaBars
+          size="30"
+          className="menu__open"
+          onClick={this.toggleMenu}
+        />
+        <NavBar className="menu" pose={isOpen ? 'open' : 'closed'}>
+          <FontAwesome.FaClose
+            size="35"
+            className="menu__close"
+            onClick={this.toggleMenu}
+          />
           <ul className="menu__list">
-            <li className="menu__item">
+            <MenuItem className="menu__item">
               <a role="button">Menu 1</a>
-            </li>
-            <li className="menu__item">
+            </MenuItem>
+            <MenuItem className="menu__item">
               <a href="#menu-2">Menu 2</a>
-            </li>
-            <li className="menu__item">
+            </MenuItem>
+            <MenuItem className="menu__item">
               <a href="#menu-3">Menu 3</a>
-            </li>
-            <li className="menu__item">
+            </MenuItem>
+            <MenuItem className="menu__item">
               <a href="#menu-4">Menu 4</a>
-            </li>
+            </MenuItem>
           </ul>
-        </nav>
+        </NavBar>
 
         {/* Header */}
         <div className="profile">
